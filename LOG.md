@@ -4,7 +4,7 @@ ________________________________________________________________________________
 
    DATE: ?.?.2026 
 
-   TIME: ?:? -> ?:? /
+   TIME: ?:? -> ?:? 
 
    OBJECTIVE: "Stworzenie głównej prototypowej strony w celu 1 zamysłu nad jej wyglądem"
 
@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
    DATE: 13.03.2026
 
-   TIME: 10:35 -> 12:15 /
+   TIME: 10:35 -> 12:15 
 
    OBJECTIVE: "Ogólny przegląd w celu przemyślenia dalszej pracy nad AR"
 
@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
    DATE: 19.03.2026
 
-   TIME: 12:30 -> 13:15 /
+   TIME: 12:30 -> 13:15 
 
    OBJECTIVE: "Konsultacia z resztą grupy w sprawie AR"
 
