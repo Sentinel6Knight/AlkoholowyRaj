@@ -1,6 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-/* KOSZYK */
 function addToCart(name, price){
   cart.push({name, price});
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -16,7 +15,7 @@ function update(){
 
   box.innerHTML = "";
 
-  cart.forEach((i)=>{
+  cart.forEach(i=>{
     total += i.price;
     box.innerHTML += "<p>" + i.name + " - " + i.price + " zł</p>";
   });
@@ -25,7 +24,7 @@ function update(){
     "Razem: " + total.toFixed(2) + " zł";
 }
 
-/* ALKOMAT */
+/* alkomat */
 function calc(){
 
   let w = document.getElementById("w").value;
@@ -36,16 +35,14 @@ function calc(){
 
   if(r < 0) r = 0;
 
-  document.getElementById("r").innerText =
-    r.toFixed(2) + "‰";
+  document.getElementById("r").innerText = r.toFixed(2) + "‰";
 }
 
-/* SLIDER */
+/* slider */
 let slides = ["MainPage_1.jpg","MainPage_2.jpg"];
 let i = 0;
 
 setInterval(()=>{
-
   let img = document.getElementById("slider");
   if(!img) return;
 
@@ -53,8 +50,6 @@ setInterval(()=>{
   if(i >= slides.length) i = 0;
 
   img.src = slides[i];
-
 },3000);
 
-/* INIT */
 update();
