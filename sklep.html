@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Sklep</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="navbar">
-<a href="index.html">Start</a>
-<a href="sklep.html">Sklep</a>
-🛒 <span id="cartCount">0</span>
-</div>
+<nav>
+  <a href="index.html">Start</a>
+  <a href="koszyk.html">Koszyk (<span id="cartCount">0</span>)</a>
+</nav>
 
-<div class="products">
+<div class="container">
+  <h1>Sklep</h1>
 
-<div class="card">
-<img src="JohnnieWalker.jpg">
-<h3>Johnnie Walker</h3>
-<button onclick="addToCart('Johnnie Walker',79.99)">Dodaj</button>
-</div>
+  <div class="grid">
 
-<div class="card">
-<img src="MainPage_1.jpg">
-<h3>Wine</h3>
-<button onclick="addToCart('Wine',49.99)">Dodaj</button>
-</div>
+    <div class="card">
+      <h3>Piwo</h3>
+      <p>6.99 zł</p>
+      <button onclick="add('Piwo', 6.99)">Dodaj</button>
+    </div>
 
-<div class="card">
-<img src="MainPage_2.jpg">
-<h3>Vodka</h3>
-<button onclick="addToCart('Vodka',59.99)">Dodaj</button>
-</div>
+    <div class="card">
+      <h3>Wino</h3>
+      <p>29.99 zł</p>
+      <button onclick="add('Wino', 29.99)">Dodaj</button>
+    </div>
 
+    <div class="card">
+      <h3>Wódka</h3>
+      <p>49.99 zł</p>
+      <button onclick="add('Wódka', 49.99)">Dodaj</button>
+    </div>
+
+  </div>
 </div>
 
 <script src="app.js"></script>
-
 </body>
 </html>
