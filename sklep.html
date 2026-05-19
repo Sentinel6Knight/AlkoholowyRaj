@@ -1,43 +1,80 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Sklep</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Sklep</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-  <a href="index.html">Start</a>
-  <a href="koszyk.html">Koszyk (<span id="cartCount">0</span>)</a>
+<nav class="navbar">
+  <div class="logo">🍺 AlkoShop</div>
+
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="sklep.html">Sklep</a>
+    <a href="alkomat.html">Alkomat</a>
+    <a href="myaccount.html">Konto</a>
+    <a href="admin.html">Admin</a>
+    🛒 <span id="cartCount">0</span>
+  </div>
 </nav>
 
-<div class="container">
-  <h1>Sklep</h1>
+<section class="products">
 
-  <div class="grid">
+<div class="card">
+  <img src="JohnnieWalker.jpg">
+  <h3>Johnnie Walker</h3>
 
-    <div class="card">
-      <h3>Piwo</h3>
-      <p>6.99 zł</p>
-      <button onclick="add('Piwo', 6.99)">Dodaj</button>
-    </div>
+  <select>
+    <option>500ml</option>
+    <option>700ml</option>
+    <option>1L</option>
+  </select>
 
-    <div class="card">
-      <h3>Wino</h3>
-      <p>29.99 zł</p>
-      <button onclick="add('Wino', 29.99)">Dodaj</button>
-    </div>
-
-    <div class="card">
-      <h3>Wódka</h3>
-      <p>49.99 zł</p>
-      <button onclick="add('Wódka', 49.99)">Dodaj</button>
-    </div>
-
-  </div>
+  <button onclick="addToCart('Johnnie Walker',79.99)">Dodaj</button>
 </div>
 
+<div class="card">
+  <img src="MainPage_1.jpg">
+  <h3>Red Wine</h3>
+
+  <select>
+    <option>750ml</option>
+    <option>1L</option>
+  </select>
+
+  <button onclick="addToCart('Red Wine',49.99)">Dodaj</button>
+</div>
+
+<div class="card">
+  <img src="MainPage_2.jpg">
+  <h3>Vodka Premium</h3>
+
+  <select>
+    <option>500ml</option>
+    <option>700ml</option>
+  </select>
+
+  <button onclick="addToCart('Vodka Premium',59.99)">Dodaj</button>
+</div>
+
+<div class="card">
+  <img src="JohnnieWalker.jpg">
+  <h3>Jack Daniels</h3>
+
+  <select>
+    <option>500ml</option>
+    <option>700ml</option>
+  </select>
+
+  <button onclick="addToCart('Jack Daniels',89.99)">Dodaj</button>
+</div>
+
+</section>
+
 <script src="app.js"></script>
+
 </body>
 </html>
