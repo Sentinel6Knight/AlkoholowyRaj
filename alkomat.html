@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Alkomat</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="navbar">
-<a href="index.html">Start</a>
-🛒 <span id="cartCount">0</span>
+<div class="container">
+  <h1>Alkomat</h1>
+
+  <input id="weight" placeholder="waga">
+  <input id="drinks" placeholder="ilość drinków">
+  <button onclick="calc()">Oblicz</button>
+
+  <h2 id="res"></h2>
 </div>
 
-<h1>Alkomat</h1>
+<script>
+function calc() {
+  let w = document.getElementById("weight").value;
+  let d = document.getElementById("drinks").value;
 
-<input id="w" placeholder="waga">
-<input id="d" placeholder="drinki">
-<input id="h" placeholder="godziny">
+  let result = (d * 10) / w;
 
-<button onclick="calc()">Oblicz</button>
-
-<h2 id="r"></h2>
-
-<script src="app.js"></script>
+  document.getElementById("res").innerText =
+    "Szacowany poziom: " + result.toFixed(2) + "‰";
+}
+</script>
 
 </body>
 </html>
