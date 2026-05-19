@@ -47,18 +47,18 @@ h1{
   color:#ffb300;
 }
 
-/* ===== GRID (PRODUKTY MAŁE) ===== */
 .grid{
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
+  justify-content:space-between; /* 🔥 zamiast center */
   gap:15px;
-  padding:10px;
+  padding:20px 40px; /* 🔥 daje boki, ale nie puste */
 }
 
-/* ===== CARD ===== */
 .card{
-  width:170px;
+  flex:1;              /* 🔥 klucz */
+  min-width:220px;     /* minimalny rozmiar */
+  max-width:300px;     /* nie robi się gigant */
   background:rgba(20,20,20,0.85);
   border-radius:12px;
   padding:10px;
@@ -67,7 +67,7 @@ h1{
 /* 🔥 ZDJĘCIA PRODUKTÓW (MAŁE) */
 .card img{
   width:100%;
-  height:110px;
+  height:140px;
   object-fit:cover;
   border-radius:8px;
 }
