@@ -92,3 +92,17 @@ input{
   border-radius:6px;
   border:none;
 }
+.slider-box{
+  width:100%;
+  max-width:500px;   /* kontroluje rozmiar */
+  margin:20px auto;
+  overflow:hidden;
+}
+
+#slider{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+  border-radius:10px;
+}
