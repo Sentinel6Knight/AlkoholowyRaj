@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-<meta charset="UTF-8">
-<title>Admin</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<div class="container">
+  <h1>Admin panel</h1>
 
-<body>
-
-<nav class="navbar">
-  <div class="logo">⚙️ Admin</div>
-
-  <div class="nav-links">
-    <a href="index.html">Start</a>
-    <a href="sklep.html">Sklep</a>
-    <a href="admin.html">Admin</a>
-    🛒 <span id="cartCount">0</span>
-  </div>
-</nav>
-
-<section class="account">
-
-<div class="account-box">
-
-<h1>⚙️ Panel Admina</h1>
-
-<p>Zamówienia w systemie:</p>
-
-<h2 id="adminOrders">0</h2>
-
-<button onclick="alert('Brak backendu - demo')">
-  Odśwież dane
-</button>
-
+  <div class="card">Zamówienie #1 - 76 zł</div>
+  <div class="card">Zamówienie #2 - 29 zł</div>
 </div>
-
-</section>
-
-<script src="app.js"></script>
-
-<script>
-  document.getElementById("adminOrders").innerText = cart.length;
-</script>
-
-</body>
-</html>
