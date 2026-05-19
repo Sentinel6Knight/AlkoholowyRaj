@@ -1,120 +1,24 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlkoShop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">🍺 AlkoShop</div>
-
-  <div class="nav-links">
-    <a href="index.html">Start</a>
-    <a href="sklep.html">Sklep</a>
-    <a href="alkomat.html">Alkomat</a>
-    <a href="myaccount.html">Konto</a>
-    <a href="admin.html">Admin</a>
-    <a href="koszyk.html">
-      🛒 <span id="cartCount">0</span>
-    </a>
-  </div>
+<nav>
+  <a href="index.html">Start</a>
+  <a href="sklep.html">Sklep</a>
+  <a href="alkomat.html">Alkomat</a>
+  <a href="myaccount.html">Konto</a>
+  <a href="admin.html">Admin</a>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-overlay">
-    <h1>Premium Alcohol Experience</h1>
-    <p>Ekskluzywne alkohole online</p>
-    <a href="sklep.html" class="hero-btn">Przejdź do sklepu</a>
-  </div>
-</header>
+<div class="container">
+  <h1>🍺 AlkoShop</h1>
+  <p>Demo sklepu online (frontend only)</p>
+</div>
 
-<!-- SLIDER -->
-<section class="slider-section">
-  <img id="slider" src="images/MainPage_1.jpg">
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-
-  <div class="feature-card">
-    <h3>🚚 Szybka dostawa</h3>
-    <p>Dostawa nawet tego samego dnia</p>
-  </div>
-
-  <div class="feature-card">
-    <h3>🥃 Premium Selection</h3>
-    <p>Najlepsze marki alkoholi</p>
-  </div>
-
-  <div class="feature-card">
-    <h3>🧮 Alkomat Online</h3>
-    <p>Sprawdź orientacyjny poziom alkoholu</p>
-  </div>
-
-</section>
-
-<!-- PRODUCTS -->
-<section class="products">
-
-  <div class="product-card">
-    <img src="images/JohnnieWalker.jpg" alt="Johnnie Walker">
-
-    <div class="product-info">
-      <h2>Johnnie Walker Black</h2>
-
-      <p class="desc">
-        Szkocka whisky premium o głębokim aromacie.
-      </p>
-
-      <p class="price">79.99 zł</p>
-
-      <button onclick="addToCart('Johnnie Walker Black', 79.99)">
-        Dodaj do koszyka
-      </button>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <img src="images/MainPage_1.jpg">
-
-    <div class="product-info">
-      <h2>Wine Collection</h2>
-      <p class="desc">Ekskluzywna kolekcja win.</p>
-      <p class="price">49.99 zł</p>
-
-      <button onclick="addToCart('Wine Collection', 49.99)">
-        Dodaj do koszyka
-      </button>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <img src="images/MainPage_2.jpg">
-
-    <div class="product-info">
-      <h2>Vodka Premium</h2>
-      <p class="desc">Mocny klasyczny smak premium.</p>
-      <p class="price">59.99 zł</p>
-
-      <button onclick="addToCart('Vodka Premium', 59.99)">
-        Dodaj do koszyka
-      </button>
-    </div>
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 AlkoShop | Projekt demo</p>
-</footer>
-
-<script src="app.js"></script>
 </body>
 </html>
