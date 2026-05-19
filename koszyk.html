@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Koszyk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="sklep.html">← Sklep</a>
+</nav>
+
+<div class="container">
+  <h1>Koszyk</h1>
+  <div id="list"></div>
+  <h2 id="total"></h2>
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let list = document.getElementById("list");
+
+let total = 0;
+
+cart.forEach(item => {
+  total += item.price;
+  let div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = item.name + " - " + item.price + " zł";
+  list.appendChild(div);
+});
+
+document.getElementById("total").innerText = "Razem: " + total + " zł";
+</script>
+
+</body>
+</html>
