@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Koszyk</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Koszyk</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-  <a href="sklep.html">← Sklep</a>
+<nav class="navbar">
+  <div class="logo">🛒 Koszyk</div>
+
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="sklep.html">Sklep</a>
+    🛒 <span id="cartCount">0</span>
+  </div>
 </nav>
 
-<div class="container">
-  <h1>Koszyk</h1>
-  <div id="list"></div>
-  <h2 id="total"></h2>
-</div>
+<section class="products">
+
+<div id="cartItems"></div>
+
+<h2 id="total"></h2>
+
+</section>
+
+<script src="app.js"></script>
 
 <script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let list = document.getElementById("list");
-
-let total = 0;
-
-cart.forEach(item => {
-  total += item.price;
-  let div = document.createElement("div");
-  div.className = "card";
-  div.innerHTML = item.name + " - " + item.price + " zł";
-  list.appendChild(div);
-});
-
-document.getElementById("total").innerText = "Razem: " + total + " zł";
+loadCart();
 </script>
 
 </body>
