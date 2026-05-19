@@ -3,41 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <title>Sklep</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Start</a>
-  <a href="koszyk.html">Koszyk (<span id="cartCount">0</span>)</a>
+<nav class="navbar">
+
+  <div class="logo">🍺 AlkoShop</div>
+
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="sklep.html">Sklep</a>
+    <a href="alkomat.html">Alkomat</a>
+    <a href="myaccount.html">Konto</a>
+    <a href="admin.html">Admin</a>
+
+    <a href="koszyk.html">
+      🛒 <span id="cartCount">0</span>
+    </a>
+  </div>
+
 </nav>
 
-<div class="container">
-  <h1>Sklep</h1>
+<section class="shop-header">
 
-  <div class="grid">
+  <h1>Premium Collection</h1>
+  <p>Wybierz swój ulubiony alkohol</p>
 
-    <div class="card">
-      <h3>Piwo</h3>
-      <p>6.99 zł</p>
-      <button onclick="add('Piwo', 6.99)">Dodaj</button>
-    </div>
+</section>
 
-    <div class="card">
-      <h3>Wino</h3>
-      <p>29.99 zł</p>
-      <button onclick="add('Wino', 29.99)">Dodaj</button>
-    </div>
+<section class="products">
 
-    <div class="card">
-      <h3>Wódka</h3>
-      <p>49.99 zł</p>
-      <button onclick="add('Wódka', 49.99)">Dodaj</button>
-    </div>
+<!-- PRODUCT 1 -->
+<div class="product-card">
 
-  </div>
+<img src="JohnnieWalker.jpg">
+
+<div class="product-info">
+
+<h2>Johnnie Walker Black</h2>
+
+<select class="bottle-select">
+
+<option>500ml</option>
+<option>700ml</option>
+<option>1L</option>
+
+</select>
+
+<p class="desc">
+Szkocka whisky premium.
+</p>
+
+<p class="price">79.99 zł</p>
+
+<button onclick="addToCart('Johnnie Walker Black',79.99)">
+Dodaj do koszyka
+</button>
+
+</div>
 </div>
 
+<!-- PRODUCT 2 -->
+<div class="product-card">
+
+<img src="MainPage_1.jpg">
+
+<div class="product-info">
+
+<h2>Red Wine Collection</h2>
+
+<select class="bottle-select">
+
+<option>750ml</option>
+<option>1L</option>
+
+</select>
+
+<p class="desc">
+Ekskluzywne czerwone wino.
+</p>
+
+<p class="price">49.99 zł</p>
+
+<button onclick="addToCart('Red Wine',49.99)">
+Dodaj do koszyka
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="product-card">
+
+<img src="MainPage_2.jpg">
+
+<div class="product-info">
+
+<h2>Vodka Premium</h2>
+
+<select class="bottle-select">
+
+<option>500ml</option>
+<option>700ml</option>
+<option>1L</option>
+
+</select>
+
+<p class="desc">
+Mocny klasyczny smak premium.
+</p>
+
+<p class="price">59.99 zł</p>
+
+<button onclick="addToCart('Vodka Premium',59.99)">
+Dodaj do koszyka
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 4 -->
+<div class="product-card">
+
+<img src="JohnnieWalker.jpg">
+
+<div class="product-info">
+
+<h2>Jack Daniels</h2>
+
+<select class="bottle-select">
+
+<option>500ml</option>
+<option>700ml</option>
+
+</select>
+
+<p class="desc">
+Amerykańska whiskey Tennessee.
+</p>
+
+<p class="price">89.99 zł</p>
+
+<button onclick="addToCart('Jack Daniels',89.99)">
+Dodaj do koszyka
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 5 -->
+<div class="product-card">
+
+<img src="MainPage_1.jpg">
+
+<div class="product-info">
+
+<h2>Champagne Gold</h2>
+
+<select class="bottle-select">
+
+<option>750ml</option>
+
+</select>
+
+<p class="desc">
+Ekskluzywny szampan premium.
+</p>
+
+<p class="price">129.99 zł</p>
+
+<button onclick="addToCart('Champagne Gold',129.99)">
+Dodaj do koszyka
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 6 -->
+<div class="product-card">
+
+<img src="MainPage_2.jpg">
+
+<div class="product-info">
+
+<h2>Gin Collection</h2>
+
+<select class="bottle-select">
+
+<option>500ml</option>
+<option>700ml</option>
+
+</select>
+
+<p class="desc">
+Aromatyczny gin premium.
+</p>
+
+<p class="price">69.99 zł</p>
+
+<button onclick="addToCart('Gin Collection',69.99)">
+Dodaj do koszyka
+</button>
+
+</div>
+</div>
+
+</section>
+
 <script src="app.js"></script>
+
 </body>
 </html>
