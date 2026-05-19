@@ -5,57 +5,60 @@ body{
   text-align:center;
 }
 
-/* SLIDER */
+/* SLIDER MAŁY */
 .slider-box{
-  width:250px;
+  width:200px;
   margin:20px auto;
 }
 
 #slider{
   width:100%;
-  height:120px;
+  height:100px;
   object-fit:cover;
-  border-radius:10px;
+  border-radius:8px;
 }
 
-/* 🔥 SKLEP - MAŁE KARTY OBOK SIEBIE */
+/* ===== SKLEP ===== */
 
 .grid{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:10px;
+  gap:8px;
   padding:10px;
 }
 
+/* 🔥 ULTRA MAŁE KARTY */
 .card{
-  width:120px;   /* 🔥 KLUCZ - małe kafelki */
+  width:100px;        /* KLUCZ */
   background:#222;
-  padding:8px;
-  border-radius:10px;
-  font-size:12px;
+  padding:5px;
+  border-radius:8px;
+  font-size:10px;
 }
 
+/* 🔥 ULTRA MAŁE ZDJĘCIA */
 .card img{
   width:100%;
-  height:80px;   /* 🔥 MAŁE ZDJĘCIA */
+  height:50px;        /* KLUCZ — bardzo małe */
   object-fit:cover;
-  border-radius:5px;
+  border-radius:4px;
 }
 
 /* BUTTON */
 button{
   width:100%;
-  margin-top:5px;
-  padding:5px;
+  margin-top:4px;
+  padding:3px;
   background:orange;
   border:none;
-  font-size:11px;
+  font-size:10px;
 }
 
 /* INPUT */
 input{
-  padding:6px;
+  padding:5px;
   margin:3px;
-  width:80px;
+  width:70px;
+  font-size:10px;
 }
