@@ -1,120 +1,88 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlkoShop</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>AlkoShop ONE PAGE</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">🍺 AlkoShop</div>
-
-  <div class="nav-links">
-    <a href="index.html">Start</a>
-    <a href="sklep.html">Sklep</a>
-    <a href="alkomat.html">Alkomat</a>
-    <a href="myaccount.html">Konto</a>
-    <a href="admin.html">Admin</a>
-    <a href="koszyk.html">
-      🛒 <span id="cartCount">0</span>
-    </a>
-  </div>
-</nav>
+<!-- NAV (tylko przewijanie) -->
+<div class="navbar">
+  <div>🍺 AlkoShop</div>
+  <div>🛒 <span id="cartCount">0</span></div>
+</div>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="hero-overlay">
-    <h1>Premium Alcohol Experience</h1>
-    <p>Ekskluzywne alkohole online</p>
-    <a href="sklep.html" class="hero-btn">Przejdź do sklepu</a>
-  </div>
-</header>
+<section class="hero">
+  <h1>AlkoShop</h1>
+  <p>Jedna strona – wszystko</p>
+</section>
 
 <!-- SLIDER -->
-<section class="slider-section">
-  <img id="slider" src="MainPage_1.jpg">
+<section class="block">
+  <img id="slider" src="MainPage_1.jpg" width="100%">
 </section>
 
-<!-- FEATURES -->
-<section class="features">
+<!-- SKLEP -->
+<section class="block">
+  <h2>Sklep</h2>
 
-  <div class="feature-card">
-    <h3>🚚 Szybka dostawa</h3>
-    <p>Dostawa nawet tego samego dnia</p>
+  <div class="card">
+    <img src="JohnnieWalker.jpg">
+    <p>Johnnie Walker</p>
+    <button onclick="addToCart('Johnnie Walker',79.99)">Dodaj</button>
   </div>
 
-  <div class="feature-card">
-    <h3>🥃 Premium Selection</h3>
-    <p>Najlepsze marki alkoholi</p>
-  </div>
-
-  <div class="feature-card">
-    <h3>🧮 Alkomat Online</h3>
-    <p>Sprawdź orientacyjny poziom alkoholu</p>
-  </div>
-
-</section>
-
-<!-- PRODUCTS -->
-<section class="products">
-
-  <div class="product-card">
-    <img src="JohnnieWalker.jpg" alt="Johnnie Walker">
-
-    <div class="product-info">
-      <h2>Johnnie Walker Black</h2>
-
-      <p class="desc">
-        Szkocka whisky premium o głębokim aromacie.
-      </p>
-
-      <p class="price">79.99 zł</p>
-
-      <button onclick="addToCart('Johnnie Walker Black', 79.99)">
-        Dodaj do koszyka
-      </button>
-    </div>
-  </div>
-
-  <div class="product-card">
+  <div class="card">
     <img src="MainPage_1.jpg">
-
-    <div class="product-info">
-      <h2>Wine Collection</h2>
-      <p class="desc">Ekskluzywna kolekcja win.</p>
-      <p class="price">49.99 zł</p>
-
-      <button onclick="addToCart('Wine Collection', 49.99)">
-        Dodaj do koszyka
-      </button>
-    </div>
+    <p>Red Wine</p>
+    <button onclick="addToCart('Wine',49.99)">Dodaj</button>
   </div>
 
-  <div class="product-card">
+  <div class="card">
     <img src="MainPage_2.jpg">
-
-    <div class="product-info">
-      <h2>Vodka Premium</h2>
-      <p class="desc">Mocny klasyczny smak premium.</p>
-      <p class="price">59.99 zł</p>
-
-      <button onclick="addToCart('Vodka Premium', 59.99)">
-        Dodaj do koszyka
-      </button>
-    </div>
+    <p>Vodka</p>
+    <button onclick="addToCart('Vodka',59.99)">Dodaj</button>
   </div>
 
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 AlkoShop | Projekt demo</p>
-</footer>
+<!-- KOSZYK -->
+<section class="block">
+  <h2>Koszyk</h2>
+  <div id="cartItems"></div>
+  <h3 id="total"></h3>
+</section>
+
+<!-- ALKOMAT -->
+<section class="block">
+  <h2>Alkomat</h2>
+
+  <input id="w" placeholder="waga">
+  <input id="d" placeholder="drinki">
+  <input id="h" placeholder="godziny">
+
+  <button onclick="calc()">Oblicz</button>
+
+  <h3 id="r"></h3>
+</section>
+
+<!-- KONTO -->
+<section class="block">
+  <h2>Konto</h2>
+  <p>Użytkownik: Guest</p>
+  <p>Produkty w koszyku: <span id="accCount">0</span></p>
+</section>
+
+<!-- ADMIN -->
+<section class="block">
+  <h2>Admin</h2>
+  <p>Ilość zamówień: <span id="adminCount">0</span></p>
+</section>
 
 <script src="app.js"></script>
+
 </body>
 </html>
