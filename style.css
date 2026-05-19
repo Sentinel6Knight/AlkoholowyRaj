@@ -1,30 +1,43 @@
 body{
   margin:0;
   font-family:Arial;
-  background:#0f0f0f;
-  color:#fff;
+  color:white;
   text-align:center;
+
+  /* 🔥 TŁO ZE ZDJĘCIA */
+  background: url("Header_main.jpg") center/cover fixed;
 }
 
-/* ===== TITLE ===== */
+/* ciemna warstwa żeby było czytelnie */
+body::before{
+  content:"";
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+  z-index:-1;
+}
+
+/* ===== TYTUŁ ===== */
 h1{
   margin-top:20px;
-  font-size:28px;
+  font-size:32px;
   color:#ffb300;
 }
 
 /* ===== SLIDER ===== */
 .slider-box{
-  width:260px;
+  width:320px;
   margin:20px auto;
 }
 
 #slider{
   width:100%;
-  height:120px;
+  height:150px;
   object-fit:cover;
-  border-radius:10px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.5);
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* ===== GRID ===== */
@@ -32,16 +45,17 @@ h1{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:10px;
+  gap:15px;
   padding:10px;
 }
 
-/* ===== CARD (ładna, równa) ===== */
+/* ===== KARTY (WIĘKSZE ALE PROSTE) ===== */
 .card{
-  width:120px;
-  background:#1c1c1c;
-  border-radius:10px;
-  padding:8px;
+  width:160px;
+  background:rgba(20,20,20,0.9);
+  border-radius:12px;
+  padding:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
   transition:0.2s;
 }
 
@@ -49,50 +63,43 @@ h1{
   transform:scale(1.05);
 }
 
-/* ===== IMAGE ===== */
+/* ===== ZDJĘCIA ===== */
 .card img{
   width:100%;
-  height:70px;
+  height:100px;
   object-fit:cover;
   border-radius:8px;
 }
 
-/* ===== TEXT ===== */
+/* ===== TEKST ===== */
 .card p{
-  margin:5px 0;
-  font-size:11px;
+  margin:8px 0;
+  font-size:13px;
 }
 
 /* ===== BUTTON ===== */
 button{
   width:100%;
-  padding:6px;
+  padding:8px;
   background:#ff9800;
   border:none;
-  border-radius:6px;
-  font-size:11px;
-  cursor:pointer;
-}
-
-button:hover{
-  background:#ffb74d;
+  border-radius:8px;
+  font-size:12px;
 }
 
 /* ===== INPUT ===== */
 input{
-  width:80px;
-  padding:5px;
-  margin:3px;
-  font-size:11px;
+  width:90px;
+  padding:6px;
+  margin:5px;
+  border-radius:6px;
   border:none;
-  border-radius:5px;
   text-align:center;
 }
 
 /* ===== KOSZYK ===== */
 #cart{
-  font-size:12px;
-  margin-top:10px;
+  font-size:13px;
 }
 
 hr{
