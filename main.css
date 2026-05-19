@@ -1,80 +1,78 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
 }
-.header{
-    display: flex;
-    flex-direction: row;
-    gap: 67px;
-    background-image: url('Header_main.jpg');
-    background-size: cover;
-    color: #fff;
-}
-.header-nav{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    background-image: url('Header_main.jpg');
-    background-size: cover;
-    color: #fff;
 
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #1a1a1a;
+  align-items: center;
 }
-.Witamy{
-    background-image: url('MainPage_1.jpg');
-    padding: 50px 60px;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
+
+.navbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
 }
-.btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+
+.logo {
+  font-weight: bold;
 }
-.btn:hover{
-    background-color: #555;
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ff9800, #ff3d00);
 }
-.btnhead{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+
+.hero h1 {
+  font-size: 40px;
 }
-.btnhead:hover{
-    background-color: #555;
+
+.buttons {
+  margin-top: 20px;
 }
-.footer{
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+
+.btn {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 6px;
 }
-.products{
-    background-image: url('MainPage_2.jpg');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    color: #f4f4f4;
+
+.btn.secondary {
+  background: white;
+  color: black;
 }
-.products-grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+
+/* INFO */
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
 }
-.Johnnie{
-    width: 70px;
-    height: auto;
-    display: flex;
-    flex-direction: row;
+
+.card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
 }
