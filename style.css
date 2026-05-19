@@ -50,24 +50,21 @@ h1{
 .grid{
   display:flex;
   flex-wrap:wrap;
-  justify-content:space-between; /* 🔥 zamiast center */
+  justify-content:center; /* zostaje środek */
   gap:15px;
-  padding:20px 40px; /* 🔥 daje boki, ale nie puste */
+  padding:20px;
 }
 
 .card{
-  flex:1;              /* 🔥 klucz */
-  min-width:220px;     /* minimalny rozmiar */
-  max-width:300px;     /* nie robi się gigant */
+  width:150px;   /* 🔥 trochę większe, ale nadal schludne */
   background:rgba(20,20,20,0.85);
   border-radius:12px;
   padding:10px;
 }
 
-/* 🔥 ZDJĘCIA PRODUKTÓW (MAŁE) */
 .card img{
   width:100%;
-  height:140px;
+  height:100px;
   object-fit:cover;
   border-radius:8px;
 }
