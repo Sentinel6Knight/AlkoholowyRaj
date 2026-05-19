@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Alkomat</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Alkomat</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-  <h1>Alkomat</h1>
+<nav class="navbar">
+  <div class="logo">🧮 Alkomat</div>
 
-  <input id="weight" placeholder="waga">
-  <input id="drinks" placeholder="ilość drinków">
-  <button onclick="calc()">Oblicz</button>
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="sklep.html">Sklep</a>
+    <a href="alkomat.html">Alkomat</a>
+    🛒 <span id="cartCount">0</span>
+  </div>
+</nav>
 
-  <h2 id="res"></h2>
-</div>
+<section class="hero">
 
-<script>
-function calc() {
-  let w = document.getElementById("weight").value;
-  let d = document.getElementById("drinks").value;
+  <div class="hero-overlay">
 
-  let result = (d * 10) / w;
+    <h1>Alkomat online</h1>
 
-  document.getElementById("res").innerText =
-    "Szacowany poziom: " + result.toFixed(2) + "‰";
-}
-</script>
+    <input id="weight" placeholder="Waga (kg)">
+    <input id="drinks" placeholder="Ilość drinków">
+    <input id="hours" placeholder="Godziny">
+
+    <button onclick="calculateAlcohol()">Oblicz</button>
+
+    <h2 id="result"></h2>
+
+  </div>
+
+</section>
+
+<script src="app.js"></script>
 
 </body>
 </html>
