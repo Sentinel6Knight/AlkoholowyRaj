@@ -85,4 +85,17 @@ button{
   background:#ff9800;
   border:none;
   cursor:pointer;
+
+  /* SLIDER FIX - żeby nie rozwalał strony */
+
+#slider{
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin: 40px auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
 }
