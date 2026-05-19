@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Sklep Premium</title>
+<title>Sklep</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,102 +21,55 @@
   </div>
 </nav>
 
-<header class="shop-header">
-  <h1>🍾 Sklep Premium</h1>
-  <p>Wybierz alkohol + pojemność</p>
-</header>
-
 <section class="products">
 
-<!-- WHISKY -->
 <div class="card">
   <img src="JohnnieWalker.jpg">
   <h3>Johnnie Walker</h3>
 
-  <select id="jw-size">
-    <option value="500ml">500ml</option>
-    <option value="700ml">700ml</option>
-    <option value="1L">1L</option>
+  <select>
+    <option>500ml</option>
+    <option>700ml</option>
+    <option>1L</option>
   </select>
 
-  <button onclick="addToCart('Johnnie Walker ' + document.getElementById('jw-size').value, 79.99)">
-    Dodaj
-  </button>
+  <button onclick="addToCart('Johnnie Walker',79.99)">Dodaj</button>
 </div>
 
-<!-- VODKA -->
-<div class="card">
-  <img src="MainPage_2.jpg">
-  <h3>Vodka Premium</h3>
-
-  <select id="vodka-size">
-    <option value="500ml">500ml</option>
-    <option value="700ml">700ml</option>
-    <option value="1L">1L</option>
-  </select>
-
-  <button onclick="addToCart('Vodka Premium ' + document.getElementById('vodka-size').value, 59.99)">
-    Dodaj
-  </button>
-</div>
-
-<!-- WINE -->
 <div class="card">
   <img src="MainPage_1.jpg">
   <h3>Red Wine</h3>
 
-  <select id="wine-size">
-    <option value="750ml">750ml</option>
-    <option value="1L">1L</option>
+  <select>
+    <option>750ml</option>
+    <option>1L</option>
   </select>
 
-  <button onclick="addToCart('Red Wine ' + document.getElementById('wine-size').value, 49.99)">
-    Dodaj
-  </button>
+  <button onclick="addToCart('Red Wine',49.99)">Dodaj</button>
 </div>
 
-<!-- JACK DANIELS -->
+<div class="card">
+  <img src="MainPage_2.jpg">
+  <h3>Vodka Premium</h3>
+
+  <select>
+    <option>500ml</option>
+    <option>700ml</option>
+  </select>
+
+  <button onclick="addToCart('Vodka Premium',59.99)">Dodaj</button>
+</div>
+
 <div class="card">
   <img src="JohnnieWalker.jpg">
   <h3>Jack Daniels</h3>
 
-  <select id="jack-size">
-    <option value="500ml">500ml</option>
-    <option value="700ml">700ml</option>
+  <select>
+    <option>500ml</option>
+    <option>700ml</option>
   </select>
 
-  <button onclick="addToCart('Jack Daniels ' + document.getElementById('jack-size').value, 89.99)">
-    Dodaj
-  </button>
-</div>
-
-<!-- CHAMPAGNE -->
-<div class="card">
-  <img src="MainPage_1.jpg">
-  <h3>Champagne Gold</h3>
-
-  <select id="champ-size">
-    <option value="750ml">750ml</option>
-  </select>
-
-  <button onclick="addToCart('Champagne Gold ' + document.getElementById('champ-size').value, 129.99)">
-    Dodaj
-  </button>
-</div>
-
-<!-- GIN -->
-<div class="card">
-  <img src="MainPage_2.jpg">
-  <h3>Gin Premium</h3>
-
-  <select id="gin-size">
-    <option value="500ml">500ml</option>
-    <option value="700ml">700ml</option>
-  </select>
-
-  <button onclick="addToCart('Gin Premium ' + document.getElementById('gin-size').value, 69.99)">
-    Dodaj
-  </button>
+  <button onclick="addToCart('Jack Daniels',89.99)">Dodaj</button>
 </div>
 
 </section>
