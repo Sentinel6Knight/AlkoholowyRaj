@@ -4,34 +4,25 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(name, price){
   cart.push({name, price});
   localStorage.setItem("cart", JSON.stringify(cart));
-  updateAll();
+  update();
 }
 
-function updateAll(){
+function update(){
 
-  let c = document.getElementById("cartCount");
-  if(c) c.innerText = cart.length;
+  document.getElementById("cartCount").innerText = cart.length;
 
-  let acc = document.getElementById("accCount");
-  if(acc) acc.innerText = cart.length;
+  let box = document.getElementById("cart");
+  let total = 0;
 
-  let admin = document.getElementById("adminCount");
-  if(admin) admin.innerText = cart.length;
+  box.innerHTML = "";
 
-  let list = document.getElementById("cartItems");
-  if(list){
+  cart.forEach((i)=>{
+    total += i.price;
+    box.innerHTML += "<p>" + i.name + " - " + i.price + " zł</p>";
+  });
 
-    let total = 0;
-    list.innerHTML = "";
-
-    cart.forEach((i)=>{
-      total += i.price;
-      list.innerHTML += `<p>${i.name} - ${i.price} zł</p>`;
-    });
-
-    document.getElementById("total").innerText =
-      "Razem: " + total.toFixed(2) + " zł";
-  }
+  document.getElementById("total").innerText =
+    "Razem: " + total.toFixed(2) + " zł";
 }
 
 /* ALKOMAT */
@@ -45,7 +36,8 @@ function calc(){
 
   if(r < 0) r = 0;
 
-  document.getElementById("r").innerText = r.toFixed(2) + "‰";
+  document.getElementById("r").innerText =
+    r.toFixed(2) + "‰";
 }
 
 /* SLIDER */
@@ -53,13 +45,16 @@ let slides = ["MainPage_1.jpg","MainPage_2.jpg"];
 let i = 0;
 
 setInterval(()=>{
+
   let img = document.getElementById("slider");
   if(!img) return;
 
   i++;
   if(i >= slides.length) i = 0;
+
   img.src = slides[i];
+
 },3000);
 
 /* INIT */
-updateAll();
+update();
