@@ -27,8 +27,8 @@ updateCart();
 // SLIDER
 
 let slides = [
-  "images/MainPage_1.jpg",
-  "images/MainPage_2.jpg"
+  "MainPage_1.jpg",
+  "MainPage_2.jpg"
 ];
 
 let current = 0;
