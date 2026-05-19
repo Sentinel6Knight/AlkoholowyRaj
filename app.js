@@ -1,46 +1,43 @@
-// app.js
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sklep</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-// KOSZYK
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+<nav>
+  <a href="index.html">Start</a>
+  <a href="koszyk.html">Koszyk (<span id="cartCount">0</span>)</a>
+</nav>
 
-function updateCart(){
-  document.getElementById("cartCount").innerText = cart.length;
-}
+<div class="container">
+  <h1>Sklep</h1>
 
-function addToCart(name, price){
+  <div class="grid">
 
-  cart.push({
-    name,
-    price
-  });
+    <div class="card">
+      <h3>Piwo</h3>
+      <p>6.99 zł</p>
+      <button onclick="add('Piwo', 6.99)">Dodaj</button>
+    </div>
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+    <div class="card">
+      <h3>Wino</h3>
+      <p>29.99 zł</p>
+      <button onclick="add('Wino', 29.99)">Dodaj</button>
+    </div>
 
-  updateCart();
+    <div class="card">
+      <h3>Wódka</h3>
+      <p>49.99 zł</p>
+      <button onclick="add('Wódka', 49.99)">Dodaj</button>
+    </div>
 
-  alert(name + " dodano do koszyka");
-}
+  </div>
+</div>
 
-updateCart();
-
-
-// SLIDER
-
-let slides = [
-  "images/MainPage_1.jpg",
-  "images/MainPage_2.jpg"
-];
-
-let current = 0;
-
-setInterval(() => {
-
-  current++;
-
-  if(current >= slides.length){
-    current = 0;
-  }
-
-  document.getElementById("slider").src = slides[current];
-
-}, 4000);
+<script src="app.js"></script>
+</body>
+</html>
