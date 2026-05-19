@@ -1,40 +1,24 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Alkomat</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav class="navbar">
-  <div class="logo">🧮 Alkomat</div>
-
-  <div class="nav-links">
-    <a href="index.html">Start</a>
-    <a href="sklep.html">Sklep</a>
-    🛒 <span id="cartCount">0</span>
-  </div>
-</nav>
-
-<section class="hero">
-
-<div class="hero-overlay">
+<div class="navbar">
+<a href="index.html">Start</a>
+🛒 <span id="cartCount">0</span>
+</div>
 
 <h1>Alkomat</h1>
 
-<input id="weight" placeholder="waga">
-<input id="drinks" placeholder="drinki">
-<input id="hours" placeholder="godziny">
+<input id="w" placeholder="waga">
+<input id="d" placeholder="drinki">
+<input id="h" placeholder="godziny">
 
-<button onclick="calculateAlcohol()">Oblicz</button>
+<button onclick="calc()">Oblicz</button>
 
-<h2 id="result"></h2>
-
-</div>
-
-</section>
+<h2 id="r"></h2>
 
 <script src="app.js"></script>
 
