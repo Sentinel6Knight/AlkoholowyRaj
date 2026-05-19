@@ -1,51 +1,40 @@
 body{
-  margin:0;
   font-family:Arial;
   background:#111;
   color:white;
+  text-align:center;
 }
 
-/* NAV */
-.navbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  padding:15px;
-  background:black;
-  z-index:10;
+h1{
+  font-size:40px;
 }
 
-/* SEKCJE */
-.block{
-  padding:80px 20px;
+#slider{
+  width:90%;
+  max-width:600px;
+  height:300px;
+  object-fit:cover;
 }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-}
-
-/* CARD */
-.card{
+.box{
   background:#222;
+  margin:10px;
   padding:10px;
-  margin:10px 0;
 }
 
-img{
+.box img{
   width:100%;
 }
 
-/* BUTTON */
 button{
   background:orange;
   border:none;
   padding:10px;
   width:100%;
+}
+
+input{
+  display:block;
+  margin:5px auto;
+  padding:10px;
 }
