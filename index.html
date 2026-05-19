@@ -8,46 +8,46 @@
 
 <body>
 
-<h1>🍺 ALKOSHOP</h1>
+<h1>🍺 AlkoShop</h1>
 
-<!-- SLIDER -->
-<img id="slider" src="MainPage_1.jpg">
+<!-- SLIDER (mały, nie full screen) -->
+<div class="slider-box">
+  <img id="slider" src="MainPage_1.jpg">
+</div>
+
+<h2>Sklep</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="JohnnieWalker.jpg">
+    <p>Johnnie Walker</p>
+    <button onclick="addToCart('Johnnie Walker',79.99)">Dodaj</button>
+  </div>
+
+  <div class="card">
+    <img src="MainPage_1.jpg">
+    <p>Red Wine</p>
+    <button onclick="addToCart('Wine',49.99)">Dodaj</button>
+  </div>
+
+  <div class="card">
+    <img src="MainPage_2.jpg">
+    <p>Vodka</p>
+    <button onclick="addToCart('Vodka',59.99)">Dodaj</button>
+  </div>
+
+</div>
 
 <hr>
 
-<!-- SKLEP -->
-<h2>SKLEP</h2>
-
-<div class="box">
-  <img src="JohnnieWalker.jpg">
-  <p>Johnnie Walker</p>
-  <button onclick="addToCart('Johnnie Walker',79.99)">Dodaj</button>
-</div>
-
-<div class="box">
-  <img src="MainPage_1.jpg">
-  <p>Red Wine</p>
-  <button onclick="addToCart('Wine',49.99)">Dodaj</button>
-</div>
-
-<div class="box">
-  <img src="MainPage_2.jpg">
-  <p>Vodka</p>
-  <button onclick="addToCart('Vodka',59.99)">Dodaj</button>
-</div>
-
-<hr>
-
-<!-- KOSZYK -->
-<h2>KOSZYK (<span id="cartCount">0</span>)</h2>
-
+<h2>Koszyk (<span id="cartCount">0</span>)</h2>
 <div id="cart"></div>
 <h3 id="total"></h3>
 
 <hr>
 
-<!-- ALKOMAT -->
-<h2>ALKOMAT</h2>
+<h2>Alkomat</h2>
 
 <input id="w" placeholder="waga">
 <input id="d" placeholder="drinki">
@@ -58,6 +58,5 @@
 <h3 id="r"></h3>
 
 <script src="app.js"></script>
-
 </body>
 </html>
