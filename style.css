@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+nav {
+  background: #222;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 8px;
+  margin-top: 10px;
+}
