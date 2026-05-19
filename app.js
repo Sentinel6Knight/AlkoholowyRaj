@@ -1,143 +1,65 @@
-// =========================
-// KOSZYK
-// =========================
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function updateCart(){
-
-    let count = document.getElementById("cartCount");
-
-    if(count){
-        count.innerText = cart.length;
-    }
-}
-
+/* KOSZYK */
 function addToCart(name, price){
-
-    cart.push({
-        name: name,
-        price: price
-    });
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    updateCart();
-
-    alert(name + " dodano do koszyka!");
+  cart.push({name, price});
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateAll();
 }
 
-// =========================
-// WYŚWIETLANIE KOSZYKA
-// =========================
+function updateAll(){
 
-function loadCart(){
+  let c = document.getElementById("cartCount");
+  if(c) c.innerText = cart.length;
 
-    let list = document.getElementById("cartItems");
+  let acc = document.getElementById("accCount");
+  if(acc) acc.innerText = cart.length;
 
-    if(!list) return;
+  let admin = document.getElementById("adminCount");
+  if(admin) admin.innerText = cart.length;
+
+  let list = document.getElementById("cartItems");
+  if(list){
 
     let total = 0;
-
     list.innerHTML = "";
 
-    cart.forEach((item, index) => {
-
-        total += item.price;
-
-        list.innerHTML += `
-            <div class="cart-item">
-                <h3>${item.name}</h3>
-                <p>${item.price.toFixed(2)} zł</p>
-
-                <button onclick="removeItem(${index})">
-                    Usuń
-                </button>
-            </div>
-        `;
+    cart.forEach((i)=>{
+      total += i.price;
+      list.innerHTML += `<p>${i.name} - ${i.price} zł</p>`;
     });
 
     document.getElementById("total").innerText =
-        "Razem: " + total.toFixed(2) + " zł";
+      "Razem: " + total.toFixed(2) + " zł";
+  }
 }
 
-function removeItem(index){
+/* ALKOMAT */
+function calc(){
 
-    cart.splice(index, 1);
+  let w = document.getElementById("w").value;
+  let d = document.getElementById("d").value;
+  let h = document.getElementById("h").value;
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+  let r = ((d*10)/w) - (h*0.15);
 
-    loadCart();
+  if(r < 0) r = 0;
 
-    updateCart();
+  document.getElementById("r").innerText = r.toFixed(2) + "‰";
 }
 
-// =========================
-// SLIDER
-// =========================
+/* SLIDER */
+let slides = ["MainPage_1.jpg","MainPage_2.jpg"];
+let i = 0;
 
-let slides = [
-    "images/MainPage_1.jpg",
-    "images/MainPage_2.jpg"
-];
+setInterval(()=>{
+  let img = document.getElementById("slider");
+  if(!img) return;
 
-let currentSlide = 0;
+  i++;
+  if(i >= slides.length) i = 0;
+  img.src = slides[i];
+},3000);
 
-function slider(){
-
-    let img = document.getElementById("slider");
-
-    if(!img) return;
-
-    setInterval(() => {
-
-        currentSlide++;
-
-        if(currentSlide >= slides.length){
-            currentSlide = 0;
-        }
-
-        img.src = slides[currentSlide];
-
-    }, 4000);
-}
-
-// =========================
-// ALKOMAT
-// =========================
-
-function calculateAlcohol(){
-
-    let weight =
-        parseFloat(document.getElementById("weight").value);
-
-    let drinks =
-        parseFloat(document.getElementById("drinks").value);
-
-    let hours =
-        parseFloat(document.getElementById("hours").value);
-
-    if(!weight || !drinks){
-
-        alert("Wpisz dane!");
-
-        return;
-    }
-
-    let promile =
-        ((drinks * 10) / weight) - (hours * 0.15);
-
-    if(promile < 0){
-        promile = 0;
-    }
-
-    document.getElementById("result").innerText =
-        "Szacowany poziom alkoholu: "
-        + promile.toFixed(2)
-        + "‰";
-}
-
-// =========================
-
-updateCart();
-slider();
+/* INIT */
+updateAll();
